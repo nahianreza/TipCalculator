@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Tip Calculator\n💲"
+        android:textAlignment="center"
+
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/base"
+        android:layout_width="41dp"
+        android:layout_height="40dp"
+        android:text="Base:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <EditText
+        android:id="@+id/baseText"
+        android:layout_width="163dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="64dp"
+        android:ems="10"
+        android:hint="Enter Amount"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@id/base"
+        app:layout_constraintTop_toTopOf="@id/base"
+        app:layout_constraintBaseline_toBaselineOf="@id/base"/>
+
+
+    <LinearLayout
+        android:id="@+id/TipLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/base"
+        app:layout_constraintTop_toBottomOf="@id/baseText">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:text="Tip Percentage:" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="70dp"
+            android:layout_height="38dp"
+            android:text="15%" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="70dp"
+            android:layout_height="38dp"
+            android:text="20%" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="70dp"
+            android:layout_height="38dp"
+            android:text="25%" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:text="Total:"
+        app:layout_constraintStart_toStartOf="@id/TipLayout"
+        app:layout_constraintTop_toBottomOf="@id/TipLayout" />
+
+    <TextView
+        android:id="@+id/totalAmountTextView"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="198dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@id/total"
+        app:layout_constraintTop_toTopOf="@id/total"
+        app:layout_constraintBaseline_toBaselineOf="@id/total"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
